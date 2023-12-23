@@ -1,0 +1,104 @@
+.folder_chip {
+    padding: 10px !important;
+    height: 60px !important;
+    min-width: 150px !important;
+    justify-content: flex-start !important;
+    font-size: 1rem !important;
+    margin: 0 10px 20px 10px !important;
+}
+
+.file_chip {
+    padding: 24px 0px!important;
+    border-radius: 0px !important;
+    min-width: 100px !important;
+    justify-content: flex-start !important;
+    font-size: 1.25rem !important;
+    background: none !important;
+    width: 100% !important;
+    touch-action: manipulation;
+
+}
+.file_box {
+    width: 5vw !important;
+    cursor: pointer !important;
+    /* padding: 0 !important; */
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 10%;
+    margin: 0 10px 20px 10px !important;
+    padding: 10px !important;
+}
+.file_box:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.file_chip > .MuiChip-label {
+    width: 100%;
+    text-align: left;
+    text-overflow: ellipsis;
+    /* padding-left: 0 !important; */
+}
+.MuiChip-deleteIcon {
+    margin-left: auto !important;
+}
+.drop_zone {
+    border: 2px dotted black !important;
+    background-color: rgba(0, 0, 0, 0.18) !important;
+}
+.preview {
+    height: 120%;
+    width: 100%;
+}
+.file_table{
+border: 0;
+height: 100% !important;
+}
+h3 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2em;
+}
+@media only screen and (max-width: 600px) {
+    .folder_chip {
+        padding: 10px !important;
+        height: 40% !important;
+        min-width: 16vw !important;
+        justify-content: flex-start !important;
+        font-size: 1rem !important;
+    }
+    .file_chip {
+        padding: 0px !important;
+        border-radius: 0px !important;
+        justify-content: flex-start !important;
+        font-size: 0.8rem !important;
+        background: none !important;
+        width: 50% !important;
+    }
+    .MuiChip-icon {
+        height: 16px !important;
+    }
+    .MuiChip-label {
+        padding-left: 2px !important;
+        /* padding-right: 2px !important; */
+        width: 100%;
+        text-overflow: ellipsis;
+    }
+    .file_box {
+        width: 5% !important;
+        
+        /* padding: 0 !important; */
+        background-color: rgba(0, 0, 0, 0.08);
+        border-radius: 10%;
+        /* margin: 0 10px 0 10px !important; */
+        padding: 0px !important;
+        overflow: hidden !important;
+
+    }
+    .preview {
+        height: 10vh;
+        width: 80%;
+    }
+    .file_table{
+        display: none;
+    }
+
+}

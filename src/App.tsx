@@ -1,24 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
+import DriveHome from './components/pages/DriveHome';
 import './App.css';
+import { FileUploadContext, FileUplodContextInterface } from './FileUploaderContext';
 
 function App() {
+
+  const defaultRoomData:FileUplodContextInterface = {
+    filesList: [],
+    foldersList: [],
+    dateAdded: new Date(),
+    path:'.',
+    name: 'My Drive',
+    currentDirectory: '.',
+
+  }
+  const [roomData, setRoomData] = useState<FileUplodContextInterface>(defaultRoomData);
+  const updateRoomData = (newData: FileUplodContextInterface) => {
+    setRoomData(newData);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FileUploadContext.Provider value={{roomData, updateRoomData}}>
+        <DriveHome/>
+      </FileUploadContext.Provider>
     </div>
   );
 }

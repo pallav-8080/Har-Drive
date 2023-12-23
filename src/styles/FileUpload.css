@@ -1,0 +1,18 @@
+.file_upload_container{
+    height: 90vh;
+        /* margin-top: 10vh; */
+    /* margin-left: 10vw; */
+    overflow-y: scroll;
+    border: 2px;
+}
+.drop_area {
+    height: 100% !important;
+    width: 100% !important;
+    border: none !important;
+    max-width: 100% !important;
+}
+.drop_box{
+    padding: 2rem;
+    height: 100%;
+    width: 100% !important;
+}
