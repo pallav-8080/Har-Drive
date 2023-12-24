@@ -19,11 +19,11 @@ The application supports the following features -
 
 Following NFRs have been targeted to ensure reliability of the application
 
-1.__Usability__ - The application is designed following the clean and active UI principles. The primary aim is to keep is easy for users to navigate without any guide or support. To achieve this, a list of UX design principles are sincerely followed which incudes - allowing scrolling for large contents, allowing drag and drop for ease of use, making use of intuitive action triggers like buttons and 3 dots for user actions, and displaying error and success toasters wherever necessary. Responsive UI is also considered a part of usability and the application is fully functional to be used across a range of devices with different screen sizes. 
+1.__Usability__ - The application is designed following the clean and active UI principles. The primary aim is to keep is easy for users to navigate without any guide or support. To achieve this, a list of UX design principles are sincerely followed which incudes - allowing scrolling for large contents, allowing drag and drop for ease of use, making use of intuitive action triggers like buttons and 3 dots for user actions, and displaying error and success toasters wherever necessary. Responsive UI is also considered a part of usability and the application is fully functional to be used across a range of devices with different screen sizes.
+
 2. __Modularity__ - The application is built with small and reusable code modules (components as known in React). The components are structured using the Atomic Design Principle, making it easy for any developer to extend and update the codebase freely.
-3. __
-4. __Security__ - Since this application collects data from a user's system, security is a critical NFR. A virus-infected file can lead to data loss for the user and sacrifice the application server as well. To ensure the security of both the application and the user, we use a 3rd party module that scans for viruses before uploading files.
-5. __Robustness__ - The application has proper error handling to handle edge cases. Yet in case it breaks, the user will still be able to see the uploaded files and access file-related operations. Since there is no backend to the application, we use the browser storage to save the state of the data room and in the event of failures load it back using ReactContext.
+3.  __Security__ - Since this application collects data from a user's system, security is a critical NFR. A virus-infected file can lead to data loss for the user and sacrifice the application server as well. To ensure the security of both the application and the user, we use a 3rd party module that scans for viruses before uploading files.
+4.   __Robustness__ - The application has proper error handling to handle edge cases. Yet in case it breaks, the user will still be able to see the uploaded files and access file-related operations. Since there is no backend to the application, we use the browser storage to save the state of the data room and in the event of failures load it back using ReactContext.
 
 
 ## Development practices used
