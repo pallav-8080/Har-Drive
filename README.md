@@ -37,9 +37,13 @@ The application follows _Atomic code organization_ principle.
  - `src`
      - `components` -> holds all the React components
           - `atoms` -> contains small reusable UX elements (Button, Menu, Link). Adopted from MUI.
-          - 'molecules` -> molecules are a combination of atoms. Reusable and serve single responsibility. Eg - TableView, FileUploader, FileActionMenu, etc.
+          - `molecules` -> molecules are a combination of atoms. Reusable and serve single responsibility. Eg - TableView, FileUploader, FileActionMenu, etc.
           - `organisms` -> collection of molecules that represent a critical section on a webpage. Eg- SideBar, FileList, AppHeader
           - `pages` -> represent different webpages of the application. Since this application is a SPA, there is only 1 page.
+      - `styles` -> holds CSS files that apply style customizations on top of MUI default styles.
+      - `utils` -> holds utility functions, for e.g. file event handlers and folder tree modifier.
+      - `icons` -> holds icons
+      - `dummyfiles` -> holds mock files in different formats PDF, DOCX, PNG, etc.
 
 ## Challenges Faced
 1. __Drag and Drop__ - considering limited time, a 3rd party react library was used to offer drag&drop feature. Upon researching and after some trial and error it becomes clear that most of the drag&drop libraries out there offer limited funcitonalities. To make the correct choice of this library was crucial as it involved balancing functionalities and customization with fewer integration efforts and easy documentation to follow. After trying out 3 libraries, finally, a package called _react-drag-drop-files_ was adopted.
