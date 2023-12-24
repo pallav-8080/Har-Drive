@@ -4,7 +4,7 @@ This application can be accessed at [Har-Drive](https://har-drive.netlify.app/).
 
 ## Demo Video
 
-[![IMAGE ALT TEXT(https://ibb.co/c6wjnW7)](https://youtu.be/SXLMcNh-vBw)
+[![IMAGE ALT TEXT](https://ibb.co/c6wjnW7)](https://youtu.be/SXLMcNh-vBw)
 
 ## Application Details
 
