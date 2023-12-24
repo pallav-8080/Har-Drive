@@ -3,6 +3,7 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import HomeIcon from '@mui/icons-material/Home';
 import FolderIcon from '@mui/icons-material/Folder';
 import Link from '@mui/material/Link';
+import '../../styles/Appbar.css';
 
 interface BreadcrumbProps{
     currentPath: string,

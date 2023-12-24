@@ -15,12 +15,15 @@ body {
 .home {
     height: 100%;
     overflow: scroll;
+        /* background-color: red; */
+    margin-top: 2%;
+
     /* over */
 }
 .main{
     /* background-color: red; */
     padding: 2vh 1vw !important;
-    border-left: 2px solid !important;
+    border-left: 1px solid rgb(207, 203, 203) !important;
     overflow-y:scroll !important;
     /* height: 100vh !important; */
 
@@ -37,7 +40,7 @@ body {
 }
 @media only screen and (max-width: 600px) {
 
-    .view_switch > #switch{
+    .view_switch{
         display: none !important;
     }
 }

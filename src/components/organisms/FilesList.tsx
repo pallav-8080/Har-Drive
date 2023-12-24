@@ -15,6 +15,7 @@ import Grid from '@mui/material/Grid';
 import Chip from '@mui/material/Chip';
 import FilePreViewer from '../molecules/FilePreViewer';
 import FileActionMenu from '../molecules/FileActionMenu';
+import NoResults from '../molecules/NoResults';
 
 interface FilesListProps {
     roomData: FileUplodContextInterface;
@@ -22,6 +23,9 @@ interface FilesListProps {
 }
 const renderFolders = (roomData:FileUplodContextInterface, dragTarget: string | null, updateRoomData: any, toggleActionMenu: any, setMenuAnchor:any) => {
   const foldersList = roomData.foldersList || [];
+  if(foldersList.length === 0){
+    return <NoResults/>
+  }
   return (
     foldersList && foldersList.map((folder) => {
       
@@ -54,7 +58,10 @@ const renderFolder = (name: string, roomData: FileUplodContextInterface, updateR
   updateRoomData(targetFolder);
 }
 const renderFiles = (filesList:File[], setPreviewFile: React.Dispatch<React.SetStateAction<File | null>>, setDragTarget : React.Dispatch<React.SetStateAction<string | null>>, toggleActionMenu:any, setMenuAnchor:any) => {
-  console.log("fff", filesList)
+  console.log("fff", filesList);
+  if(filesList.length === 0){
+    return <NoResults/>
+  }
   const handleFileClick = (e:any) => {
     const fileName = e.currentTarget.id;
     const file = filesList.filter(f => f.name === fileName)[0];

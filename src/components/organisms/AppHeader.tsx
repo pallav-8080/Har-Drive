@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import '../../styles/Appbar.css';
+import CloudSyncIcon from '@mui/icons-material/CloudSync';
 
 interface AppHeaderProps {
   sideBarExpanded: boolean;
@@ -39,13 +40,11 @@ const AppHeader = ({ sideBarExpanded, toggleSideBar }: AppHeaderProps) => {
             sx={{ mr: 2 }}
           >
             <MenuIcon className="menu_icon"  onClick={() => toggleSideBar(!sideBarExpanded)}/>
-            <Typography className="logo" variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Har-Drive
-          </Typography>
+            <div className='logo'><CloudSyncIcon fontSize='large'/> HarDrive</div>
           </IconButton>
           
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Data Room
+            Harvey Data Room
           </Typography>
           <IconButton
                 size="large"
@@ -55,7 +54,7 @@ const AppHeader = ({ sideBarExpanded, toggleSideBar }: AppHeaderProps) => {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle />
+                <AccountCircle fontSize='large'/>
               </IconButton>          
               <Menu
                 id="menu-appbar"

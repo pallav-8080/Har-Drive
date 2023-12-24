@@ -30,11 +30,14 @@
 .file_box:hover {
     background-color: rgba(0, 0, 0, 0.12);
 }
-
-.file_chip > .MuiChip-label {
+.MuiChip-label {
+    /* padding-right: 2px !important; */
     width: 100%;
     text-align: left;
     text-overflow: ellipsis;
+
+}
+.file_chip > .MuiChip-label {
     /* padding-left: 0 !important; */
 }
 .MuiChip-deleteIcon {
@@ -48,19 +51,24 @@
     height: 120%;
     width: 100%;
 }
-.file_table{
-border: 0;
-height: 100% !important;
-}
+
 h3 {
     width: 100%;
     text-align: left;
     margin-bottom: 2em;
 }
+/* ------- Table view styles ----- */
+.file_table{
+    border: 0;
+    height: 100% !important;
+}
+.MuiDataGrid-columnHeaderTitle{
+    font-weight: bold !important;
+}
 @media only screen and (max-width: 600px) {
     .folder_chip {
         padding: 10px !important;
-        height: 40% !important;
+        /* height: 40% !important; */
         min-width: 16vw !important;
         justify-content: flex-start !important;
         font-size: 1rem !important;
@@ -76,12 +84,10 @@ h3 {
     .MuiChip-icon {
         height: 16px !important;
     }
-    .MuiChip-label {
+    .file_chip > .MuiChip-label {
         padding-left: 2px !important;
-        /* padding-right: 2px !important; */
-        width: 100%;
-        text-overflow: ellipsis;
     }
+
     .file_box {
         width: 5% !important;
         

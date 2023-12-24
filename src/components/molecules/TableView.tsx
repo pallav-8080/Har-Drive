@@ -92,25 +92,28 @@ const TableView = ({filesList}: TableViewProps) => {
   };
 
   const columns: GridColDef[] = [
-    { field: 'name', headerName: 'Name', width: 180, editable: true },
+    { field: 'name', headerName: 'Name', flex:0.5, editable: true,
+  },
     {
       field: 'date',
       headerName: 'Date',
       type: 'date',
       width: 180,
+      flex:0.25,
       editable: false,
     },
     {
       field: 'owner',
       headerName: 'Owner',
-      width: 220,
+      // width: 200,
       editable: false,
+      flex:0.25,
       type: 'string',
     },
     {
       field: 'type',
       headerName: 'Type',
-      width: 220,
+      flex:0.25,
       editable: false,
       type: 'string',
     },
@@ -118,7 +121,7 @@ const TableView = ({filesList}: TableViewProps) => {
       field: 'actions',
       type: 'actions',
       headerName: 'Actions',
-      width: 100,
+      flex:0.25,
       cellClassName: 'actions',
       getActions: ({ id }) => {
         const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
