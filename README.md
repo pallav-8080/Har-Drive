@@ -17,7 +17,7 @@ The application supports the following features -
 
 ### Non-Functional Requirements 
 
-Following NFRs have been targeted to ensure reliability of the application
+Following NFRs have been targeted to ensure the reliability of the application
 
 1. __Usability__ - The application is designed following the clean and active UI principles. The primary aim is to keep is easy for users to navigate without any guide or support. To achieve this, a list of UX design principles are sincerely followed which incudes - allowing scrolling for large contents, allowing drag and drop for ease of use, making use of intuitive action triggers like buttons and 3 dots for user actions, and displaying error and success toasters wherever necessary. Responsive UI is also considered a part of usability and the application is fully functional to be used across a range of devices with different screen sizes.
 
@@ -38,8 +38,15 @@ Following are the enhancements that can be made to the current application state
 3. __Material-UI__ - This is the choice of design library used for the application. A design library helps ensure uniform and responsive styling  across the application. Out of the many available solutions, MUI is chosen due to its ease of use, high customizability, and detailed documentation. It comes out of the box with styled React components, making it easy to define default styles for React components.
   
 # Challenges Faced
+1. Drag and Drop - considering limited time, a 3rd party react library was used to offer drag&drop feature. Upon researching and after some trial and error it becomes clear that most of the drag&drop libraries out there offer limited funcitonalities. To make the correct choice of this library was crucial as it involved balancing functionalities and customization with fewer integration efforts and easy documentation to follow. After trying out 3 libraries, finally, a package called _react-drag-drop-files_ was adopted.
+2. Mocking API calls - in a usual setup there will be a backend server that provides with necessary data on the list of files and folders inside the room. But with no backend, all of the state updates need to be stored somewhere. We make use of React context to store the full hierarchy of files and folders and make synchronous updates to the store. Although this solution works fine with fewer files, it comes with the challenge of updating the directory tree when there is a large nested hierarchy of files involved. To simplify we clone the context and store the absolute path for each file. Yet as of now the application only supports nesting up to 2 levels deep.
+  
 # Code organization
+The application follows _Atomic code organization_ principle.
+`src` - This folder contains the client-side code
 
-# Runnin the application locally
+
+
+# Running the application locally
 To run the app in development mode use `npm run start`.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
