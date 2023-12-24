@@ -34,6 +34,10 @@ Following NFRs have been targeted to ensure the reliability of the application
   ## Code organization
 The application follows _Atomic code organization_ principle.
 `src` - This folder contains the client-side code
+`src`
+    `components`
+     `styles`
+     `icons`
 
 ## Challenges Faced
 1. __Drag and Drop__ - considering limited time, a 3rd party react library was used to offer drag&drop feature. Upon researching and after some trial and error it becomes clear that most of the drag&drop libraries out there offer limited funcitonalities. To make the correct choice of this library was crucial as it involved balancing functionalities and customization with fewer integration efforts and easy documentation to follow. After trying out 3 libraries, finally, a package called _react-drag-drop-files_ was adopted.
@@ -43,7 +47,7 @@ The application follows _Atomic code organization_ principle.
 Following are the enhancements that can be made to the current application state - 
 1. __Support filters and search__: Add filters for file type, date added, owner, file size, etc. This will boost usbaility of the application by making it quicker with fewer clicks for user to access files of their choice.
 2. __Allow file downloading__: Currently the system only provides a preview of the files in the data room. Problem with this is, some files can be very large, making git hard to read through file preview. A user might be interested in downloading them and viewing with appropriate other applications.
-3. __Support data room invitations: The current application only allows a single user to perform operations in the data room. for collaboration, a user might be interested in sharing the whole or partial data room with someone else. To support this use case, either provide a quick public link to the data room for public sharing or allow sharing privately through email.
+3. __Data room invitation__: The current application only allows a single user to perform operations in the data room. for collaboration, a user might be interested in sharing the whole or partial data room with someone else. To support this use case, either provide a quick public link to the data room for public sharing or allow sharing privately through email.
 4. __Track file activity__: The application allows editing files - name and destination folder. This is perfectly fine for single users in a data room. But with multiple users, it's hard to keep track of edits. Tracking a file's journey within the data room will help follow up actions between users working on same file.
    
 # Running the application locally
