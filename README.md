@@ -1,10 +1,10 @@
-# Application link
+## Application link
 
 This application can be accessed at [Har-Drive](https://har-drive.netlify.app/).
 
-# Application Details
+## Application Details
 
-## Functional Requirements
+### Functional Requirements
 
 The application supports the following features - 
 
@@ -15,7 +15,7 @@ The application supports the following features -
 5. Users can switch between grid view and table view.
 6. Users can preview a file without downloading it.
 
-## Non-Functional Requirements 
+### Non-Functional Requirements 
 
 Following NFRs have been targeted to ensure reliability of the application
 
@@ -24,29 +24,14 @@ Following NFRs have been targeted to ensure reliability of the application
 3. __Robustness__ - The application has proper error handling to handle edge cases. Yet in case it breaks, the user will still be able to see the uploaded files and access file-related operations. Since there is no backend to the application, we use the browser storage to save the state of the data room and in the event of failures load it back using ReactContext.
 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-
-# Development practices used
+## Development practices used
+1. 
 # Further improvements
 # Tech stack
+1. React - The application was initialized using the `create-react-app` scaffold. The various reasons behind choosing the framework include -  out-of-the-box tooling (Webpack, ESlint, Babel, etc), enhanced modularity(our NFR), allows ease of user event handling.
+2. Typescript - A type system to make dynamic JS code more predictable. TS is added to allow specifying the types of data being passed around within the code, and it also helps in catching typical React errors like props mismatch and immutability issues, easy to catch during development.
+3. Material-UI - This is the choice of design library used for the application. A design library helps ensure uniform and responsive styling  across the application. Out of the many available solutions, MUI is chosen due to its ease of use, high customizability, and detailed documentation. It comes out of the box with styled React components, making it easy to define default styles for React components.
+  
 # Challenges Faced
 # Code organization
 
