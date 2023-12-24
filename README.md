@@ -23,7 +23,7 @@ Following NFRs have been targeted to ensure the reliability of the application
 
 2. __Modularity__ - The application is built with small and reusable code modules (components as known in React). The components are structured using the Atomic Design Principle, making it easy for any developer to extend and update the codebase freely.
 3.  __Security__ - Since this application collects data from a user's system, security is a critical NFR. A virus-infected file can lead to data loss for the user and sacrifice the application server as well. To ensure the security of both the application and the user, we use a 3rd party module that scans for viruses before uploading files.
-4.   __Robustness__ - The application has proper error handling to handle edge cases. Yet in case it breaks, the user will still be able to see the uploaded files and access file-related operations. Since there is no backend to the application, we use the browser storage to save the state of the data room and in the event of failures load it back using ReactContext.
+4.   __Robustness__ - The application has proper error handling to handle edge cases. Yet in case it breaks, the user will still be able to see the uploaded files and access file-related operations. Since there is no backend to the application, the use of browser storage is done to save the state of the data room and in the event of failures, load the previous back into ReactContext.
 
 
 ## Tech stack
