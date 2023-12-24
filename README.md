@@ -34,10 +34,9 @@ Following NFRs have been targeted to ensure the reliability of the application
   ## Code organization
 The application follows _Atomic code organization_ principle.
 `src` - This folder contains the client-side code
-`src`
-    `components`
-     `styles`
-     `icons`
+ - `src`
+     - `components`
+                  - `atoms`
 
 ## Challenges Faced
 1. __Drag and Drop__ - considering limited time, a 3rd party react library was used to offer drag&drop feature. Upon researching and after some trial and error it becomes clear that most of the drag&drop libraries out there offer limited funcitonalities. To make the correct choice of this library was crucial as it involved balancing functionalities and customization with fewer integration efforts and easy documentation to follow. After trying out 3 libraries, finally, a package called _react-drag-drop-files_ was adopted.
