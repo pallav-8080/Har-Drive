@@ -19,16 +19,19 @@ The application supports the following features -
 
 Following NFRs have been targeted to ensure reliability of the application
 
-1.__Usability__ - The application is designed following the clean and active UI principles. The primary aim is to keep is easy for users to navigate without any guide or support. To achieve this, a list of UX design principles are sincerely followed which incudes - allowing scrolling for large contents, allowing drag and drop for ease of use, making use of intuitive action triggers like buttons and 3 dots for user actions, and displaying error and success toasters wherever necessary. Responsive UI is also considered a part of usability and the application is fully functional to be used across a range of devices with different screen sizes.
+1. __Usability__ - The application is designed following the clean and active UI principles. The primary aim is to keep is easy for users to navigate without any guide or support. To achieve this, a list of UX design principles are sincerely followed which incudes - allowing scrolling for large contents, allowing drag and drop for ease of use, making use of intuitive action triggers like buttons and 3 dots for user actions, and displaying error and success toasters wherever necessary. Responsive UI is also considered a part of usability and the application is fully functional to be used across a range of devices with different screen sizes.
 
 2. __Modularity__ - The application is built with small and reusable code modules (components as known in React). The components are structured using the Atomic Design Principle, making it easy for any developer to extend and update the codebase freely.
 3.  __Security__ - Since this application collects data from a user's system, security is a critical NFR. A virus-infected file can lead to data loss for the user and sacrifice the application server as well. To ensure the security of both the application and the user, we use a 3rd party module that scans for viruses before uploading files.
 4.   __Robustness__ - The application has proper error handling to handle edge cases. Yet in case it breaks, the user will still be able to see the uploaded files and access file-related operations. Since there is no backend to the application, we use the browser storage to save the state of the data room and in the event of failures load it back using ReactContext.
 
-
-## Development practices used
-1. 
 # Further improvements
+Following are the enhancements that can be made to the current application state - 
+1. __Support filters and search__: Add filters for file type, date added, owner, file size, etc. This will boost usbaility of the application by making it quicker with fewer clicks for user to access files of their choice.
+2. __Allow file downloading__: Currently the system only provides a preview of the files in the data room. Problem with this is, some files can be very large, making git hard to read through file preview. A user might be interested in downloading them and viewing with appropriate other applications.
+3. __Support data room invitations: The current application only allows a single user to perform operations in the data room. for collaboration, a user might be interested in sharing the whole or partial data room with someone else. To support this use case, either provide a quick public link to the data room for public sharing or allow sharing privately through email.
+4. __Track file activity__: The application allows editing files - name and destination folder. This is perfectly fine for single users in a data room. But with multiple users, it's hard to keep track of edits. Tracking a file's journey within the data room will help follow up actions between users working on same file.
+
 # Tech stack
 1. __React__ - The application was initialized using the `create-react-app` scaffold. The various reasons behind choosing the framework include -  out-of-the-box tooling (Webpack, ESlint, Babel, etc), enhanced modularity(our NFR), allows ease of user event handling.
 2. __Typescript__ - A type system to make dynamic JS code more predictable. TS is added to allow specifying the types of data being passed around within the code, and it also helps in catching typical React errors like props mismatch and immutability issues, easy to catch during development.
