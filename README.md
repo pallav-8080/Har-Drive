@@ -2,6 +2,11 @@
 
 This application can be accessed at [Har-Drive](https://har-drive.netlify.app/).
 
+## Demo Video
+
+<img width="242" alt="png_preview" src="https://github.com/pallav-8080/Har-Drive/assets/113065248/d47340af-2b55-4ab7-9f8f-927321bd682c">
+(https://youtu.be/SXLMcNh-vBw)
+
 ## Application Details
 
 ### Functional Requirements
