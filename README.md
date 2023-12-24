@@ -1,18 +1,28 @@
-# application link Started with Create React App
+# Application link
 
 This application can be accessed at [Har-Drive](https://har-drive.netlify.app/).
 
-## Available Scripts
+# Application Details
 
-In the project directory, you can run:
+## Functional Requirements
 
-### `npm start`
+The application supports the following features - 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Users can upload files and folders by dragging and dropping or by using a file upload menu.
+2. Users can edit file names.
+3. Users can drag and move files into folders.
+4. Users can delete any files or folders.
+5. Users can switch between grid view and table view.
+6. Users can preview a file without downloading it.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Non-Functional Requirements 
+
+Following NFRs have been targeted to ensure reliability of the application
+
+1. __Modularity__ - The application is built with small and reusable code modules (components as known in React). The components are structured using the Atomic Design Principle, making it easy for any developer to extend and update the codebase freely.
+2. __Security__ - Since this application collects data from a user's system, security is a critical NFR. A virus-infected file can lead to data loss for the user and sacrifice the application server as well. To ensure the security of both the application and the user, we use a 3rd party module that scans for viruses before uploading files.
+3. __Robustness__ - The application has proper error handling to handle edge cases. Yet in case it breaks, the user will still be able to see the uploaded files and access file-related operations. Since there is no backend to the application, we use the browser storage to save the state of the data room and in the event of failures load it back using ReactContext.
+
 
 ### `npm test`
 
@@ -33,14 +43,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Development practices used
+# Further improvements
+# Tech stack
+# Challenges Faced
+# Code organization
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Runnin the application locally
+To run the app in development mode use `npm run start`.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
